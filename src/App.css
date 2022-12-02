@@ -1,12 +1,173 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.main {
+  width: 30%;
+  height: 100vh;
+  object-fit: cover;
+}
+.right {
+  margin-left: 100px;
+}
+.radios {
+  margin-top: 30px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.checks {
+  display: flex;
+}
+.checks input {
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+.checks label.checked {
+  background: rgb(235, 243, 255);
+  border: 1px solid rgb(6, 100, 255);
+}
+.checks label {
+  background: rgb(249, 249, 251);
+  position: relative;
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(227, 231, 251);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(227, 231, 251);
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.bar_item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.bar_item p {
+  padding: 5px;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  background: rgb(249, 249, 251);
+  justify-content: center;
+  margin-right: 8px;
+}
+.bar_item.active p {
+  background: rgb(6, 100, 255) !important;
+  color: white;
+}
+.bar_item.active {
+  font-weight: 500;
+}
+.bar_item.full p {
+  background: rgb(235, 243, 255);
+}
+.stepName {
+  color: grey;
+}
+.fdc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.form1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+form {
+  width: 600px;
+}
+.address {
+  border-bottom: 1px solid rgb(227, 231, 251);
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.blueBtn {
+  background: rgb(6, 100, 255);
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+button {
+  cursor: pointer;
+}
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.textBtn {
+  border: none;
+  background: none;
+  color: black;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.rightAlign {
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+  border-radius: 10px;
+  margin-top: 8px;
+  border: none;
+  padding: 0 10px;
+  outline: 1px solid grey;
+  font-size: 16px;
+}
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+  height: 45px;
+}
+textarea {
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid rgb(6, 100, 255);
 }
-
+input.error {
+  outline: 1px solid rgb(217, 17, 56);
+  background: rgb(255, 240, 242);
+}
+button:disabled {
+  opacity: 0.7;
+}
+.errorLbl {
+  color: rgb(217, 17, 56);
+}
+.errorMes {
+  color: rgb(217, 17, 56);
+  font-size: 14px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
